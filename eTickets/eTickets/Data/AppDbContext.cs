@@ -1,14 +1,26 @@
 ﻿using System;
+using System.Configuration;
 using eTickets.Models;
+using MySql.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace eTickets.Data
 {
 	public class AppDbContext:DbContext
 	{
-		public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
+        private readonly IConfiguration _configuration;
+
+        public AppDbContext(DbContextOptions<AppDbContext> options, IConfiguration configuration):base(options)
 		{
-		}
+            _configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var connectionString = _configuration.GetConnectionString("DefaultConnection");
+            optionsBuilder.UseMySQL(connectionString);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
