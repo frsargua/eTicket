@@ -72,9 +72,10 @@ namespace eTickets.Migrations
                     Name = table.Column<string>(type: "longtext", nullable: false),
                     Description = table.Column<string>(type: "longtext", nullable: false),
                     Price = table.Column<double>(type: "double", nullable: false),
+                    ImageURL = table.Column<string>(type: "longtext", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    MovierCategory = table.Column<int>(type: "int", nullable: false),
+                    MovieCategory = table.Column<int>(type: "int", nullable: false),
                     CinemaId = table.Column<int>(type: "int", nullable: false),
                     ProducerId = table.Column<int>(type: "int", nullable: false)
                 },

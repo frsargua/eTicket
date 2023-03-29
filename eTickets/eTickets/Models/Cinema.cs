@@ -1,19 +1,22 @@
-﻿using System;
+﻿
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
-	public class Cinema
-	{
+    public class Cinema
+    {
         [Key]
-        public int Id { set; get; }
+        public int Id { get; set; }
 
-        public string Logo { set; get; }
+        public string Logo { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
-        public string Name { set; get; }
-
-        public string Description { set; get; }
-
+        //Relationships
+        public List<Movie> Movies { get; set; }
     }
 }
-

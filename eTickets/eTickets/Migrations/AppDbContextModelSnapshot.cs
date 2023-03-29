@@ -96,7 +96,11 @@ namespace eTickets.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("MovierCategory")
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MovieCategory")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -166,7 +170,7 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Movie", b =>
                 {
                     b.HasOne("eTickets.Models.Cinema", "Cinema")
-                        .WithMany()
+                        .WithMany("Movies")
                         .HasForeignKey("CinemaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -185,6 +189,11 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Actor", b =>
                 {
                     b.Navigation("Actors_Movies");
+                });
+
+            modelBuilder.Entity("eTickets.Models.Cinema", b =>
+                {
+                    b.Navigation("Movies");
                 });
 
             modelBuilder.Entity("eTickets.Models.Movie", b =>
