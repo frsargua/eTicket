@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "Umx2kNpyqfkoRpUgBwxxjQ0XTP9W2x13mJOObcxVtcQVKbUJ0KOaz3f89QSNQP/nRwGH5XMyf7SKUfcew/xwug==",
+  "dgSpecHash": "4PfYAEo3oRJZ4RcZ0plFbBdR8aKbegYTXj1DyH29+M5esZksWm4gSPyLhxzukfJDgVCuK1HyhSHHzZQTxjwAVQ==",
   "success": true,
   "projectFilePath": "/Users/fabiansarango/Desktop/Home Practice/CSharpProjects/eTicket/eTickets/eTickets/eTickets.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/fabiansarango/.nuget/packages/microsoft.entityframeworkcore/7.0.4/microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.4/microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.4/microsoft.entityframeworkcore.analyzers.7.0.4.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/fabiansarango/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
