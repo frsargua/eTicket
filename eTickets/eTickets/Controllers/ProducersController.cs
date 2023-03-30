@@ -22,10 +22,11 @@ namespace eTickets.Controllers
         }
 
         // GET: /<controller>/
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var allProducers = _context.Producers.ToListAsync();
-            return View();
+            var allProducers = await _context.Producers.ToListAsync();
+
+            return View(allProducers);
         }
     }
 }
