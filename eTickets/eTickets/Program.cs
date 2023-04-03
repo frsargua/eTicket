@@ -1,13 +1,16 @@
 ﻿using eTickets.Data;
+using eTickets.Data.Services;
 using eTickets.Migrations;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>();
-
+builder.Services.AddScoped<IActorsService, ActorsService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
