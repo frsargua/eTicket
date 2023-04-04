@@ -25,6 +25,11 @@ namespace eTickets.Controllers
             var allProducers = await _context.Movies.Include(n => n.Cinema).ToListAsync();
             return View(allProducers);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
 
