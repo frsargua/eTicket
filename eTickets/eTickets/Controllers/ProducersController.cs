@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eTickets.Data;
+using eTickets.Data.Services;
+using eTickets.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,17 +16,17 @@ namespace eTickets.Controllers
     {
 
 
-        private readonly AppDbContext _context;
+        private readonly IProducersService _service;
 
-        public ProducersController(AppDbContext context)
+        public ProducersController(IProducersService service)
         {
-            _context = context;
+            _service = service;
         }
 
         // GET: /<controller>/
         public async Task<IActionResult> Index()
         {
-            var allProducers = await _context.Producers.ToListAsync();
+            var allProducers = await _service.GetAll();
 
             return View(allProducers);
         }
@@ -32,6 +34,59 @@ namespace eTickets.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var data = await _service.GetByIdAsync(id);
+            return View(data);
+        }
+
+        public async Task<IActionResult>  Edit(int id)
+        {
+            var data = await _service.GetByIdAsync(id);
+            return View(data);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var data = await _service.GetByIdAsync(id);
+            return View(data);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var actor = await _service.GetByIdAsync(id);
+            if (actor == null) return View("Not Found");
+            await _service.DeleteAsync(id);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public async Task<IActionResult> EditConfirm(int id, [Bind("Id,FullName,ProfilePictureURL,Bio")] Producer producer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(producer);
+            }
+
+            await _service.UpdateAsync(id, producer);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")] Producer producer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(producer);
+            }
+            _service.Add(producer);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
