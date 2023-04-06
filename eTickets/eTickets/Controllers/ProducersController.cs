@@ -39,18 +39,21 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var data = await _service.GetByIdAsync(id);
+            if (data == null) return View("NotFound");
             return View(data);
         }
 
         public async Task<IActionResult>  Edit(int id)
         {
             var data = await _service.GetByIdAsync(id);
+            if (data == null) return View("NotFound");
             return View(data);
         }
 
         public async Task<IActionResult> Details(int id)
         {
             var data = await _service.GetByIdAsync(id);
+            if (data == null) return View("NotFound");
             return View(data);
         }
 

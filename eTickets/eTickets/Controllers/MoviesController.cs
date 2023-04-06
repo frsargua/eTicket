@@ -26,10 +26,7 @@ namespace eTickets.Controllers
             return View(allProducers);
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+
     }
 }
 
