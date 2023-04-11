@@ -7,7 +7,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace eTickets.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,7 +22,7 @@ namespace eTickets.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     ProfilePictureURL = table.Column<string>(type: "longtext", nullable: false),
-                    FullName = table.Column<string>(type: "longtext", nullable: false),
+                    FullName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     Bio = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
@@ -38,7 +38,7 @@ namespace eTickets.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Logo = table.Column<string>(type: "longtext", nullable: false),
-                    Name = table.Column<string>(type: "longtext", nullable: false),
+                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
@@ -54,7 +54,7 @@ namespace eTickets.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     ProfilePictureURL = table.Column<string>(type: "longtext", nullable: false),
-                    FullName = table.Column<string>(type: "longtext", nullable: false),
+                    FullName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     Bio = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
