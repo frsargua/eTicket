@@ -6,7 +6,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace eTickets.Migrations
 {
-    //Migration
+    //Migrations
     /// <inheritdoc />
     public partial class InitialCreate : Migration
     {
