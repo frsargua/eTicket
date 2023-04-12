@@ -1,20 +1,24 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{0F6D0F72-A0C6-408E-957B-2F89424678F6}|https">
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <Breakpoint file="/Users/fabiansarango/Desktop/Home Practice/CSharpProjects/eTicket/eTickets/eTickets/Controllers/ActorsController.cs" relfile="eTickets/Controllers/ActorsController.cs" line="86" column="1" />
+    <BreakpointStore>
+      <Breakpoint file="/Users/fabiansarango/Desktop/Home Practice/CSharpProjects/eTicket/eTickets/eTickets/Controllers/ActorsController.cs" relfile="eTickets/Controllers/ActorsController.cs" line="86" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="eTickets/Program.cs">
+    <Files>
+      <File FileName="eTickets/Program.cs" Line="9" Column="34" />
+      <File FileName="eTickets/Migrations/20230411201704_InitialCreate.cs" Line="13" Column="27" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="eTickets" expanded="True">
             <Node name="eTickets" expanded="True">
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20230329174326_initial.cs" expanded="True" />
-                <Node name="AppDbContextModelSnapshot.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>
