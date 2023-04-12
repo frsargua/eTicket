@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using eTickets.Models;
 
 namespace eTickets.Data.Base
@@ -6,6 +7,7 @@ namespace eTickets.Data.Base
 	public interface IEntityBaseRepository<T> where T:class, IEntityBase,new()
 	{
         Task<IEnumerable<T>> GetAll();
+        Task<IEnumerable<T>> GetAll(params Expression<Func<T, Object>>[] includeProperties);
         Task<T> GetByIdAsync(int id);
         void Add(T entity);
         Task DeleteAsync(int id);
