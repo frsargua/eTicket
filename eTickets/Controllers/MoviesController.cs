@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eTickets.Data;
 using eTickets.Data.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -35,7 +36,17 @@ namespace eTickets.Controllers
             return View(data);
         }
 
+        // GET: /<controller>/
+        public async Task<IActionResult> Create()
+        {
+            var movieDropdowsData = await _service.GetNewMovieDropdowsValues();
 
+            ViewBag.Cinemas = new SelectList(movieDropdowsData.Cinemas, "Id","Name");
+            ViewBag.Producers = new SelectList(movieDropdowsData.Producers, "Id", "FullName");
+            ViewBag.Actors = new SelectList(movieDropdowsData.Actors, "Id", "FullName");
+
+            return View();
+        }
     }
 }
 
