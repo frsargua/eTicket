@@ -17,6 +17,7 @@
     <None Remove="Views\Movies\" />
     <None Remove="Data\Services\" />
     <None Remove="Data\Base\" />
+    <None Remove="Data\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -27,6 +28,7 @@
     <Folder Include="Views\Movies\" />
     <Folder Include="Data\Services\" />
     <Folder Include="Data\Base\" />
+    <Folder Include="Data\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />

@@ -23,7 +23,7 @@
                 {
                     <tr>
                         <td class="align-middle">
-                            <img class="rounded-circle" src="@item.Logo" style="max-width:150px"/>
+                            <img class="rounded-circle" src="@item.Logo" style="max-width:150px" />
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(modelItem => item.Name)
@@ -34,7 +34,7 @@
                         <td class="align-middle">
                             <a class="btn btn-primary text-white" asp-controller="Cinemas" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i> Edit</a>|
                             <a class="btn btn-info text-white" asp-controller="Cinemas" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i> View</a>
-                         </td>
+                        </td>
                     </tr>
                 }
             </tbody>
@@ -42,6 +42,4 @@
     </div>
 </div>
 
-<div style="position:fixed; right:25px; bottom:25px" class="text-white">
-    <a asp-controller="Cinemas" asp-action="Create" class="btn btn-success">Add Cinema</a>
-</div>
+@await Html.PartialAsync("_CreateItem", "Cinemas") 
