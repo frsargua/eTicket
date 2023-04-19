@@ -224,95 +224,95 @@ namespace eTickets.Migrations
                             new Actor_Movie()
                             {
                                 ActorId = 1,
-                                MovieId = 71
+                                MovieId = 1
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 1,
-                                MovieId = 81
+                                MovieId = 11
                             },
 
                              new Actor_Movie()
                             {
                                 ActorId = 1,
-                                MovieId = 91
+                                MovieId = 21
                             },
                              new Actor_Movie()
                             {
                                 ActorId = 1,
-                                MovieId = 101
+                                MovieId = 31
                             },
 
                             new Actor_Movie()
                             {
                                 ActorId = 1,
-                                MovieId = 111
+                                MovieId = 41
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 11,
-                                MovieId = 71
+                                MovieId = 1
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 11,
-                                MovieId = 81
+                                MovieId = 11
                             },
 
 
                             new Actor_Movie()
                             {
                                 ActorId = 11,
-                                MovieId = 91
+                                MovieId = 21
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 11,
-                                MovieId = 101
+                                MovieId = 31
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 11,
-                                MovieId = 111
+                                MovieId = 41
                             },
 
 
                             new Actor_Movie()
                             {
                                 ActorId = 21,
-                                MovieId = 71
+                                MovieId = 1
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 21,
-                                MovieId = 81
+                                MovieId = 11
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 21,
-                                MovieId = 91
+                                MovieId = 21
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 41,
-                                MovieId = 101
+                                MovieId = 31
                             },
 
 
                             new Actor_Movie()
                             {
                                 ActorId = 31,
-                                MovieId = 101
+                                MovieId = 11
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 41,
-                                MovieId = 111
+                                MovieId = 41
                             },
                             new Actor_Movie()
                             {
                                 ActorId = 41,
-                                MovieId = 91
+                                MovieId = 51
                             },
                         });
                     context.SaveChanges();
