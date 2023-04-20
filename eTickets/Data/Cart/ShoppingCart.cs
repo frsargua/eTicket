@@ -17,6 +17,17 @@ namespace eTickets.Data.Cart
 			_context = context;
 		}
 
+		public static ShoppingCart GetShoppingCart(IServiceProvider services)
+		{
+			ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+			var context = services.GetService<AppDbContext>();
+
+			string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
+			session.SetString("CartId", cartId);
+
+			return new ShoppingCart(context) { ShoppingCartId = cartId };
+		}
+
 		public void AddItemToCart(Movie movie)
 		{
 			var shoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n => n.Movie.Id == movie.Id && n.ShoppingCartId == ShoppingCartId);
@@ -49,7 +60,7 @@ namespace eTickets.Data.Cart
 				}
 				else
 				{
-                    _context.ShoppingCartItems.Add(shoppingCartItem);
+                    _context.ShoppingCartItems.Remove(shoppingCartItem);
                 }
             }
 

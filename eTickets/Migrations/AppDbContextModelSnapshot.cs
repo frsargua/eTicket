@@ -209,7 +209,7 @@ namespace eTickets.Migrations
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShoppingCart")
+                    b.Property<string>("ShoppingCartId")
                         .IsRequired()
                         .HasColumnType("longtext");
 
