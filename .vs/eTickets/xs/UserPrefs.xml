@@ -1,4 +1,33 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{0F6D0F72-A0C6-408E-957B-2F89424678F6}|https">
+﻿<Properties StartupConfiguration="{0F6D0F72-A0C6-408E-957B-2F89424678F6}|https" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.eTickets PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="eTickets" expanded="True">
+            <Node name="eTickets" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Base" expanded="True" />
+                <Node name="Enums" expanded="True" />
+                <Node name="Services" expanded="True" />
+                <Node name="ViewModels" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Actors" expanded="True" />
+                <Node name="Cinemas" expanded="True" />
+                <Node name="Movies" expanded="True" />
+                <Node name="Producers" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/fabiansarango/Desktop/Home Practice/CSharpProjects/eTicket/eTickets/eTickets/Controllers/ActorsController.cs" relfile="eTickets/Controllers/ActorsController.cs" line="86" column="1" />
@@ -6,26 +35,4 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="eTickets/Program.cs">
-    <Files>
-      <File FileName="eTickets/Program.cs" Line="9" Column="34" />
-      <File FileName="eTickets/Migrations/20230411201704_InitialCreate.cs" Line="13" Column="27" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="eTickets" expanded="True">
-            <Node name="eTickets" expanded="True">
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.eTickets PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

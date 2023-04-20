@@ -13,11 +13,11 @@ namespace eTickets.Models
 
         public int MovieId { set; get; }
         [ForeignKey("MovieId")]
-        public virtual Movie Movie { set; get; }
+        public Movie Movie { set; get; }
 
         public int OrderId { set; get; }
         [ForeignKey("OrderId")]
-        public virtual Order Order { set; get; }
+        public Order Order { set; get; }
     }
 }
 
