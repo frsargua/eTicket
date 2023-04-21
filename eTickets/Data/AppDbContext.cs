@@ -4,10 +4,11 @@ using eTickets.Models;
 using MySql.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace eTickets.Data
 {
-	public class AppDbContext:DbContext
+	public class AppDbContext:IdentityDbContext<ApplicationUser>
 	{
         private readonly IConfiguration _configuration;
 
