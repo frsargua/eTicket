@@ -351,10 +351,10 @@ namespace eTickets.Migrations
                 }
 
                 //Users
-                string appUserEmail = "admin@etickets.com";
+                string appUserEmail = "user@etickets.com";
 
                 var appUser = await userManager.FindByEmailAsync(appUserEmail);
-                if (adminUser == null)
+                if (appUser == null)
                 {
                     var newAppUser = new ApplicationUser()
                     {
